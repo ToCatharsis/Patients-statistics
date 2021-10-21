@@ -5,17 +5,29 @@
  */
 package database;
 
+import java.util.ArrayList;
+
 /**
  *
- * @author user
+ * @author ToCatharsis
  */
-public class Database {
+public class Database 
+{
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    public static void main(String[] args) 
+    {
+        ArrayList<Patient> list = new ArrayList<Patient>();
+        Patient patient1 = new Patient("John", "Watson", 30);
+        
+        list.add(patient1);
+        list.size();
+        for (int i=0; i<list.size(); i++)
+        {
+            
+        }
     }
     
 }
