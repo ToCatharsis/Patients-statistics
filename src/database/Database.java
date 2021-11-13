@@ -5,11 +5,13 @@
  */
 package database;
 
+import java.io.BufferedReader;
+import java.io.Reader;
 import java.util.ArrayList;
 
 /**
  *
- * @author ToCatharsis
+ * @author Ivan Ryzhankow
  */
 public class Database 
 {
@@ -19,15 +21,18 @@ public class Database
      */
     public static void main(String[] args) 
     {
-        ArrayList<Patient> list = new ArrayList<Patient>();
-        Patient patient1 = new Patient("John", "Watson", 30);
+        Patient patient1 = new Patient(1, 72, "1", 173.0, 169.0, 1.0303, 25, 1);
+        Patient patient2 = new Patient(2, 82, "0", 139.0, 170.0, 1.1104, 51, 3);
         
-        list.add(patient1);
-        list.size();
-        for (int i=0; i<list.size(); i++)
+        PatientsList list = new PatientsList();
+        list.patients.add(patient1);
+        list.patients.add(patient2);
+        
+        for (int i=0; i<list.patients.size(); i++)
         {
-            
+            System.out.println(list.patients.get(i).toString());
         }
-    }
-    
+    }    
 }
+
+

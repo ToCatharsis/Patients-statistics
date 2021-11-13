@@ -5,11 +5,13 @@
  */
 package database;
 
+import java.util.ArrayList;
+
 /**
  *
- * @author ToCatharsis
+ * @author Ivan Ryzhankow
  */
-public class List 
+public class PatientsList 
 {
-    
+    ArrayList<Patient> patients = new ArrayList<Patient>();    
 }

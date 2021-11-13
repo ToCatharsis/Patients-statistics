@@ -1,0 +1,87 @@
+. insheet using "P:\Teach\518-2004\Data\MRI2.csv"
+
+Description of MRIdata.txt
+
+The Cardiovascular Health Study is a government sponsored cohort study of
+adults aged 65 years and older in four communities. The primary goals of the
+study were to observe the incidence of cardiovascular disease
+(especially heart attacks and congestive heart failure) and cerebrovascular 
+disease (especially strokes) in the elderly over an 11 year period, and to 
+relate the incidence of those diseases to various risk factors measured in 
+the population on a regular basis. By such an observational study, greater 
+insight into the natural history of chronic diseases in the elderly would be 
+obtained.
+
+In this study, over 5,000 elderly, generally healthy, adults were randomly 
+selected from Medicare rolls in four communities. Agreement to participate 
+was high, and thus the sample can be regarded as a fairly accurate 
+representation of healthy older Americans. At the time of study enrollment, 
+and on annual visits over the length of the study, the participants' data 
+regarding various behavioral (e.g., smoking, alcohol consumption),
+functional (e.g., ability to perform routine tasks), and clinical 
+(e.g., blood pressure, laboratory tests) measures are recorded. In addition,
+all serious medical events (e.g., hospitalizations, heart attacks)
+are investigated and categorized based on standardized, study-wide definitions.
+
+MRI is a relatively new imaging modality that has been found to be of great 
+utility in diagnosing brain tumors, strokes, and other brain abnormalities. 
+In imaging older people, however, a number of brain changes have been observed. 
+The medical community is uncertain of the clinical significance of these changes. In 
+particular, it has been observed that brains tend to atrophy (shrink) with age, 
+that the white matter in the brain (regions of the brain that appear white
+rather than gray on gross examination) tends to show up as ``brighter'' on 
+MRI in older people, and that there is increasing incidence with age of
+regions of the brain that look like areas of dead tissue (infarct-like lesions)
+even in persons having no history of clinical stroke. It has not yet been 
+established whether these changes should be viewed as part
+of the normal aging process, whether these changes are merely signs of other
+disease such as heart disease, or whether these changes are indicative of
+separate disease processes. Thus, approximately three years into the follow-up 
+of this study, participants were asked to submit to magnetic resonance imaging 
+(MRI) of their brains. 
+
+The file MRIdata.txt contains selected data on the subset of 735 subjects having 
+the longest follow-up from this study. The data are in ASCII format with each 
+line corresponding to the observations on one of the 735 participants. 
+When data is missing for a particular variable, `NA' is recorded. The 
+descriptions of the variables are as follows:
+
+ptid=
+Participant identification number
+
+age=
+Participant age at time of MRI (years)
+
+male=
+Indicator of whether participant is male (0= female,1=male)
+
+weight=
+Participant weight at time of MRI (pounds)
+
+height=
+Participant height at time of MRI (centimeters)
+
+aai=
+The ratio of systolic blood pressure measured in the 
+participant's ankle at the time of MRI to the systolic 
+blood pressure measured in the particpant'arm. Typically, 
+we measure blood pressure in the arm. However, in patients 
+with severe hardening of the arteries, the arteries in the 
+legs may become so blocked as to restrict blood flow to the 
+lower extremities. Thus, measuring the ankle blood pressure 
+relative to the arm blood pressure is a marker of
+extent of arterial disease: A low ankle : arm index suggests 
+more severe peripheral arterial disease. A person with no 
+peripheral arterial disease might be expected to have aai=1.
+
+dsst=
+A measure of cognitive function (ability to think) for the 
+participant at the time of MRI. In this Digit Symbol 
+Substitution Test, the participant is asked to replace each 
+of a number of numerical digits with specific symbols.
+The highest possible score on the test is 100.
+
+numinf=
+A count of the number of distinct regions identified on MRI 
+scan that were suggestive of infarcts (dead areas of the 
+brain due to oxygen deprivation).
