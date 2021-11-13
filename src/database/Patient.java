@@ -7,26 +7,79 @@ package database;
 
 /**
  *
- * @author ToCatharsis
+ * @author Ivan Ryzhankow
  */
-public class Patient extends List
+public class Patient extends PatientsList
 {
-    private String name;
-    private String surname;
+    private int participantID;
     private int age;
+    private boolean male;
+    private double weight;
+    private double height;
+    private double ankleArmRatio;
+    private int digitSymbolSubstitutionTest;
+    private int numberInfarcts;
     
-    Patient() {}
     
-    Patient(String name, String surname, int age) 
+    Patient(String participantID, String age, String male, String weight, 
+            String height, String ankleArmRatio, 
+            String digitSymbolSubstitutionTest, String numberInfarcts) 
     {
-        this.name = name;
-        this.surname = surname;
-        this.age = age;
+        this.participantID = Integer.valueOf(participantID);
+        this.age = Integer.valueOf(age);
+        this.male = Boolean.valueOf((male == "1" ? "true" : "false"));
+        this.weight = Double.valueOf(weight)*0.454;
+        this.height = Double.valueOf(height);
+        this.ankleArmRatio = Double.valueOf(ankleArmRatio);
+        this.digitSymbolSubstitutionTest = Integer.valueOf(digitSymbolSubstitutionTest);
+        this.numberInfarcts = Integer.valueOf(numberInfarcts);
     }
     
-    void information()
+    Patient(int participantID, int age, String male, double weight, 
+            double height, double ankleArmRatio, 
+            int digitSymbolSubstitutionTest, int numberInfarcts) 
     {
-        System.out.println("Name: " + name + "\n" + "Surname: " + surname + "\n"
-                           + "Age: " + age + "\n");
+        this.participantID = Integer.valueOf(participantID);
+        this.age = Integer.valueOf(age);
+        this.male = Boolean.valueOf((male == "1" ? "true" : "false"));
+        this.weight = Double.valueOf(weight)*0.454;
+        this.height = Double.valueOf(height);
+        this.ankleArmRatio = Double.valueOf(ankleArmRatio);
+        this.digitSymbolSubstitutionTest = Integer.valueOf(digitSymbolSubstitutionTest);
+        this.numberInfarcts = Integer.valueOf(numberInfarcts);
+    }
+    
+
+    public int getParticipantID() {return participantID;}
+    
+    public int getAge() {return age;}
+    
+    public boolean isMale() {return male;}
+    
+    public double getWeight() {return weight;}
+    
+    public double getHeight() {return height;}
+    
+    public double getAnkleArmRatio() {return ankleArmRatio;}
+    
+    public int getDigitSymbolSubstitutionTest() {return digitSymbolSubstitutionTest;}
+    
+    public int getNumberInfarcts() {return numberInfarcts;}
+    
+    
+    
+    public String toString()
+    {
+        return "The " + getClass().getSimpleName() + " has ID: " + getParticipantID()
+                + ", age of " + getAge() + 
+                (isMale() == true ? " and is a male. " : " and is a female. ") +
+                "The " + getClass().getSimpleName() + " has weight of " + getWeight() + 
+                " kg, is " + getHeight() + " cm height, has " + getAnkleArmRatio()
+                + " ratio of systolic blood pressure measured in the ankle at the"
+                + " time of MRI to the systolic blood pressure measured in the "
+                + "particpant's arm, has Digit Symbol Substitution Test score "
+                + getDigitSymbolSubstitutionTest() + " and the number of "
+                + "distinct regions identified on MRI scan that were suggestive "
+                + "of infarcts is " + getNumberInfarcts();       
     }
 }
