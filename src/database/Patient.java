@@ -35,13 +35,13 @@ public class Patient extends PatientsList
         this.numberInfarcts = Integer.valueOf(numberInfarcts);
     }
     
-    Patient(int participantID, int age, String male, double weight, 
+    Patient(int participantID, int age, int male, double weight, 
             double height, double ankleArmRatio, 
             int digitSymbolSubstitutionTest, int numberInfarcts) 
     {
         this.participantID = Integer.valueOf(participantID);
         this.age = Integer.valueOf(age);
-        this.male = Boolean.valueOf((male == "1" ? "true" : "false"));
+        this.male = Boolean.valueOf((male == 1 ? "true" : "false"));
         this.weight = Double.valueOf(weight)*0.454;
         this.height = Double.valueOf(height);
         this.ankleArmRatio = Double.valueOf(ankleArmRatio);
@@ -65,6 +65,47 @@ public class Patient extends PatientsList
     public int getDigitSymbolSubstitutionTest() {return digitSymbolSubstitutionTest;}
     
     public int getNumberInfarcts() {return numberInfarcts;}
+    
+    
+    public void setParticipantID(int participantID)
+    {
+        this.participantID = participantID;
+    }
+    
+    public void setAge(int age)
+    {
+        this.age = age;
+    }
+    
+    public void setMale(boolean male)
+    {
+        this.male = male;
+    }
+    
+    public void setWeight(double weight)
+    {
+        this.weight = weight;
+    }
+    
+    public void setHeight(double height)
+    {
+        this.height = height;
+    }
+    
+    public void setAnkleArmRatio(double ankleArmRatio)
+    {
+        this.ankleArmRatio = ankleArmRatio;
+    }
+    
+    public void setAnkleArmRatio(int digitSymbolSubstitutionTest)
+    {
+        this.digitSymbolSubstitutionTest = digitSymbolSubstitutionTest;
+    }
+    
+    public void setNumberInfarcts(int numberInfarcts)
+    {
+        this.numberInfarcts = numberInfarcts;
+    }
     
     
     
