@@ -9,7 +9,7 @@ package database;
  *
  * @author Ivan Ryzhankow
  */
-public class Patient extends PatientsList
+public class Patient extends Database
 {
     private int participantID;
     private int age;
