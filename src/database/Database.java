@@ -5,24 +5,62 @@
  */
 package database;
 
+import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.Scanner;
+
 /**
  *
  * @author Ivan Ryzhankow
  */
+
 public class Database 
 {
 
     /**
      * @param args the command line arguments
      */
+    
+     ArrayList<Patient> patients = new ArrayList<Patient>();  
+    
+    
+    public static void readFile(ArrayList<Patient> patients) throws Exception
+    {
+        int i1, i2, i3, i4, i5;
+        double d1, d2, d3;
+        FileReader fr = new FileReader("Dataset/Dataset.txt");
+        Scanner scan = new Scanner(fr);
+        
+        while (scan.hasNext())
+        {     
+            i1 = Integer.valueOf(scan.next());
+            i2 = Integer.valueOf(scan.next());
+            i3 = Integer.valueOf(scan.next());
+            d1 = Double.valueOf(scan.next());
+            d2 = Double.valueOf(scan.next());
+            d3 = Double.valueOf(scan.next());
+            i4 = Integer.valueOf(scan.next());
+            i5 = Integer.valueOf(scan.next());
+            
+            patients.add(new Patient(i1, i2, i3, d1, d2, d3, i4, i5));
+            
+            /*
+            System.out.println(i1+ " " + i2 + " " + i3 + " " + d1 + " " + d2 +
+                    " " + d3 + " " + i4 + " " + i5);
+            */
+        }
+        fr.close();     
+    }
+    
+    
     public static void main(String[] args) throws Exception
     {        
-        PatientsList list = new PatientsList();        
-        list.readFile(list.patients);        
+        Database database = new Database();        
+        database.readFile(database.patients);        
         
-        for (int i=0; i<list.patients.size(); i++)
+        for (int i=0; i<database.patients.size(); i++)
         {
-            System.out.println(list.patients.get(i).toString());
+            System.out.println(database.patients.get(i).toString());
         }        
     }    
 }
