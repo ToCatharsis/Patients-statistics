@@ -7,7 +7,7 @@ package database;
 
 /**
  *
- * @author Ivan Ryzhankow
+ * @author Ivan Ryzhankow, Alina Yermakova
  */
 public class Patient extends Database
 {
