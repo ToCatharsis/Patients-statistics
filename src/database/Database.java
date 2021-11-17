@@ -31,6 +31,7 @@ public class Database
     {
         int i1, i2, i3, i4, i5;
         double d1, d2, d3;
+        String s;
         FileReader fr = new FileReader("Dataset/Dataset.txt");
         Scanner scan = new Scanner(fr);
         
@@ -41,8 +42,16 @@ public class Database
             i3 = Integer.valueOf(scan.next());
             d1 = Double.valueOf(scan.next());
             d2 = Double.valueOf(scan.next());
-            d3 = Double.valueOf(scan.next());
-            i4 = Integer.valueOf(scan.next());
+            s = scan.next();
+            if (s.equals("NA"))
+                d3 = 2000.0;
+            else
+                d3 = Double.valueOf(s);
+            s = scan.next();
+            if (s.equals("NA"))
+                i4 = 2000;
+            else
+                i4 = Integer.valueOf(s);
             i5 = Integer.valueOf(scan.next());
             
             patients.add(new Patient(i1, i2, i3, d1, d2, d3, i4, i5));
@@ -54,6 +63,7 @@ public class Database
     {
         int i1, i2, i3, i4, i5;
         double d1, d2, d3;
+        String s;
         FileReader fr = new FileReader("Dataset/Dataset.txt");
         Scanner scan = new Scanner(fr);
         
@@ -64,8 +74,16 @@ public class Database
             i3 = Integer.valueOf(scan.next());
             d1 = Double.valueOf(scan.next());
             d2 = Double.valueOf(scan.next());
-            d3 = Double.valueOf(scan.next());
-            i4 = Integer.valueOf(scan.next());
+            s = scan.next();
+            if (s.equals("NA"))
+                d3 = 2000.0;
+            else
+                d3 = Double.valueOf(s);
+            s = scan.next();
+            if (s.equals("NA"))
+                i4 = 2000;
+            else
+                i4 = Integer.valueOf(s);
             i5 = Integer.valueOf(scan.next());
             
             if (i3 != 1)
@@ -80,6 +98,7 @@ public class Database
     {
         int i1, i2, i3, i4, i5;
         double d1, d2, d3;
+        String s;
         FileReader fr = new FileReader("Dataset/Dataset.txt");
         Scanner scan = new Scanner(fr);
         
@@ -90,8 +109,16 @@ public class Database
             i3 = Integer.valueOf(scan.next());
             d1 = Double.valueOf(scan.next());
             d2 = Double.valueOf(scan.next());
-            d3 = Double.valueOf(scan.next());
-            i4 = Integer.valueOf(scan.next());
+            s = scan.next();
+            if (s.equals("NA"))
+                d3 = 2000.0;
+            else
+                d3 = Double.valueOf(s);
+            s = scan.next();
+            if (s.equals("NA"))
+                i4 = 2000;
+            else
+                i4 = Integer.valueOf(s);
             i5 = Integer.valueOf(scan.next());
             
             if (i3 == 1)
@@ -114,17 +141,17 @@ public class Database
         database.readFileMale(database.patientsMale);
         database.readFileFemale(database.patientsFemale);        
         
-        for (int i=0; i<database.patientsFemale.size(); i++)
+        for (int i=0; i<database.patients.size(); i++)
         {
-            //System.out.println(database.patientsFemale.get(i).toString());
+            System.out.println(database.patients.get(i).toString());
         } 
         
         statistics.setAverageAge(database.patients);
-        statistics.setAverageHeight(database.patients);
-        statistics.setAverageWeight(database.patients);
-        System.out.println(statistics.getAverageAge());
-        System.out.println(statistics.getAverageHeight());
-        System.out.println(statistics.getAverageWeight());
+        statistics.setAverageDigitSymbolSubstitutionTest(database.patients);
+        statistics.setAverageAnkleArmRatio(database.patients);
+        //System.out.println(statistics.getAverageAge());
+        System.out.println(statistics.getAverageDigitSymbolSubstitutionTest());
+        System.out.println(statistics.getAverageAnkleArmRatio());
     }    
 }
 
