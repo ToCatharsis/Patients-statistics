@@ -63,23 +63,31 @@ public class Statistics
     public void setAverageAnkleArmRatio (ArrayList<Patient> patients)
     {
         double amountAnkleArmRatio=0;
+        int counter=0;
         
         for (int i=0; i<patients.size(); i++)
         {
-            amountAnkleArmRatio += patients.get(i).getAnkleArmRatio();
+            if (patients.get(i).getAnkleArmRatio() == 2000.0)
+                counter++;
+            else
+                amountAnkleArmRatio += patients.get(i).getAnkleArmRatio();
         }
-        averageAnkleArmRatio = amountAnkleArmRatio/patients.size();
+        averageAnkleArmRatio = amountAnkleArmRatio/(patients.size() - counter);
     }
     
     public void setAverageDigitSymbolSubstitutionTest (ArrayList<Patient> patients)
     {
         double amountDigitSymbolSubstitutionTest=0;
+        int counter=0;
         
         for (int i=0; i<patients.size(); i++)
         {
-            amountDigitSymbolSubstitutionTest += patients.get(i).getDigitSymbolSubstitutionTest();
+            if (patients.get(i).getDigitSymbolSubstitutionTest() == 2000)
+                counter++;
+            else
+                amountDigitSymbolSubstitutionTest += patients.get(i).getDigitSymbolSubstitutionTest();
         }
-        averageDigitSymbolSubstitutionTest = amountDigitSymbolSubstitutionTest/patients.size();
+        averageDigitSymbolSubstitutionTest = amountDigitSymbolSubstitutionTest/(patients.size() - counter);
     }
     
     public void setAverageNumberInfarcts (ArrayList<Patient> patients)
