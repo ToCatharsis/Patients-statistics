@@ -4,6 +4,8 @@ import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import static database.Const.*;
+
 
 /**
  *
@@ -39,12 +41,12 @@ public class Database
             d2 = Double.valueOf(scan.next());
             s = scan.next();
             if (s.equals("NA"))
-                d3 = 2000.0;
+                d3 = NA_REPLACEMENT_DOUBLE;
             else
                 d3 = Double.valueOf(s);
             s = scan.next();
             if (s.equals("NA"))
-                i4 = 2000;
+                i4 = NA_REPLACEMENT_INT;
             else
                 i4 = Integer.valueOf(s);
             i5 = Integer.valueOf(scan.next());
@@ -54,7 +56,8 @@ public class Database
         fr.close();     
     }
     
-    public void readFileMale(ArrayList<Patient> patientsMale) throws Exception
+    public void readFileSex(ArrayList<Patient> patientsMale, 
+            ArrayList<Patient> patientsFemale) throws Exception
     {
         int i1, i2, i3, i4, i5;
         double d1, d2, d3;
@@ -71,58 +74,24 @@ public class Database
             d2 = Double.valueOf(scan.next());
             s = scan.next();
             if (s.equals("NA"))
-                d3 = 2000.0;
+                d3 = NA_REPLACEMENT_DOUBLE;
             else
                 d3 = Double.valueOf(s);
             s = scan.next();
             if (s.equals("NA"))
-                i4 = 2000;
-            else
-                i4 = Integer.valueOf(s);
-            i5 = Integer.valueOf(scan.next());
-            
-            if (i3 != 1)
-                continue;
-            
-            patientsMale.add(new Patient(i1, i2, i3, d1, d2, d3, i4, i5));
-        }
-        fr.close();     
-    }
-    
-    public void readFileFemale(ArrayList<Patient> patientsFemale) throws Exception
-    {
-        int i1, i2, i3, i4, i5;
-        double d1, d2, d3;
-        String s;
-        FileReader fr = new FileReader("Dataset/Dataset.txt");
-        Scanner scan = new Scanner(fr);
-        
-        while (scan.hasNext())
-        {     
-            i1 = Integer.valueOf(scan.next());
-            i2 = Integer.valueOf(scan.next());
-            i3 = Integer.valueOf(scan.next());
-            d1 = Double.valueOf(scan.next());
-            d2 = Double.valueOf(scan.next());
-            s = scan.next();
-            if (s.equals("NA"))
-                d3 = 2000.0;
-            else
-                d3 = Double.valueOf(s);
-            s = scan.next();
-            if (s.equals("NA"))
-                i4 = 2000;
+                i4 = NA_REPLACEMENT_INT;
             else
                 i4 = Integer.valueOf(s);
             i5 = Integer.valueOf(scan.next());
             
             if (i3 == 1)
-                continue;
-            
-            patientsFemale.add(new Patient(i1, i2, i3, d1, d2, d3, i4, i5));
+                patientsMale.add(new Patient(i1, i2, i3, d1, d2, d3, i4, i5));
+            else
+                patientsFemale.add(new Patient(i1, i2, i3, d1, d2, d3, i4, i5));
         }
         fr.close();     
-    }    
+    }
+ 
     
     
     public static void main(String[] args) throws Exception
@@ -133,8 +102,7 @@ public class Database
         Statistics statisticsFemale = new Statistics();
         
         database.readFile(database.patients); 
-        database.readFileMale(database.patientsMale);
-        database.readFileFemale(database.patientsFemale);        
+        database.readFileSex(database.patientsMale, database.patientsFemale);       
         
         for (int i=0; i<database.patients.size(); i++)
         {

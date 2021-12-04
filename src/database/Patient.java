@@ -1,5 +1,7 @@
 package database;
 
+import static database.Const.*;
+
 /**
  * A general Patient has an ID, an age, is male or female, has weight, height, 
  * a ratio of systolic blood pressure measured in the Patient's ankle 
@@ -82,7 +84,7 @@ public class Patient
         this.participantID = participantID;
         this.age = age;
         this.male = Boolean.valueOf((male == 1 ? "true" : "false"));
-        this.weight = weight*0.454;
+        this.weight = weight*LB_TO_KG_RATIO;
         this.height = height;
         this.ankleArmRatio = ankleArmRatio;
         this.digitSymbolSubstitutionTest = digitSymbolSubstitutionTest;
