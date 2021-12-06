@@ -101,6 +101,9 @@ public class Database
         Statistics statisticsMale = new Statistics();
         Statistics statisticsFemale = new Statistics();
         
+        GUIDatabase app = new GUIDatabase();
+        app.setVisible(true);
+        
         database.readFile(database.patients); 
         database.readFileSex(database.patientsMale, database.patientsFemale);       
         
