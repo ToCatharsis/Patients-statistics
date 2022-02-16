@@ -1,0 +1,48 @@
+Dla analizy zostali wybrane wszyscy
+- Średnia wartość wieku: 74.64625850340136
+- Odchylenie standardowe wieku: 5.167931889528795
+- Mediana dla wieku: 73.0
+- Kwartyl górny dla wieku: 71.0
+- Kwartyl dolny dla wieku: 78.0
+- Średnia wartość wagi: 72.55206872487618
+- Odchylenie standardowe wagi: 13.93449394436528
+- Mediana dla wagi: 71.66759446
+- Kwartyl górny dla wagi: 62.822543245000006
+- Kwartyl dolny dla wagi: 81.19303423000001
+- Średnia wartość wzrostu: 165.77741496598648
+- Odchylenie standardowe wzrostu: 9.703470526382542
+- Mediana dla wzrostu: 165.9
+- Kwartyl górny dla wzrostu: 158.0
+- Kwartyl dolny dla wzrostu: 173.0
+- Średnia wartość stosunku skurczowego ciśnienia krwi pacjenta 
+mierzonego w kostce pacjenta podczas MRI do skurczowego ciśnienia 
+krwi mierzonego w ramieniu pacjenta: 1.103245867768596
+- Odchylenie standardowe stosunku skurczowego ciśnienia krwi pacjenta 
+mierzonego w kostce pacjenta podczas MRI do skurczowego ciśnienia 
+krwi mierzonego w ramieniu pacjenta: 221.1913271018907
+- Mediana dla stosunku skurczowego ciśnienia krwi pacjenta 
+mierzonego w kostce pacjenta podczas MRI do skurczowego ciśnienia 
+krwi mierzonego w ramieniu pacjenta: 1.1121
+- Kwartyl górny dla stosunku skurczowego ciśnienia krwi pacjenta 
+mierzonego w kostce pacjenta podczas MRI do skurczowego ciśnienia 
+krwi mierzonego w ramieniu pacjenta: 1.0268
+- Kwartyl dolny dla stosunku skurczowego ciśnienia krwi pacjenta 
+mierzonego w kostce pacjenta podczas MRI do skurczowego ciśnienia 
+krwi mierzonego w ramieniu pacjenta: 1.2071
+- Średnia wartość oceny pacjentów z "The Digit Symbol Substitution Test":
+ 41.056708160442604
+- Odchylenie standardowe oceny pacjentów z "The Digit Symbol Substitution 
+Test": 250.62119971213136
+- Mediana dla oceny pacjentów z "The Digit Symbol Substitution 
+Test": 40.0
+- Kwartyl górny dla oceny pacjentów z "The Digit Symbol Substitution 
+Test": 32.0
+- Kwartyl dolny dla oceny pacjentów z "The Digit Symbol Substitution 
+Test": 50.0
+- Średnia wartość liczby podejrzanych zawałów u pacjentów:
+ 0.6108843537414966
+- Odchylenie standardowe liczby podejrzanych zawałów u pacjentów:
+ 0.9888582883897543
+- Mediana dla liczby podejrzanych zawałów u pacjentów: 0.0
+- Kwartyl górny dla liczby podejrzanych zawałów u pacjentów: 0.0
+- Kwartyl dolny dla liczby podejrzanych zawałów u pacjentów: 1.0
