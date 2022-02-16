@@ -10,5 +10,3 @@ program has a built-in GUI.
 To run this project correctly you will need library jfeechart:
 
 https://www.jfree.org/jfreechart/
-
-Alina Yermakova and Ivan Ryzhankow
