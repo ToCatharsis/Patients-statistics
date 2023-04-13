@@ -1,4 +1,4 @@
-# Database and patients' statistics
+# Working with files and patients' statistics
 Authors: Ivan Ryzhankow and Alina Yermakova (https://github.com/AlinaYermakova)
 
 University JAVA project which represents a program, which can be used
